@@ -1,0 +1,92 @@
+body{
+    display: block;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+}
+
+.ball{
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    position: relative;
+}
+.red {
+    background-color: red;
+    animation-name: exemplo1;
+    animation-duration: 4s;
+    animation-delay: 2s;
+}
+
+.yellow {
+    background-color: yellow;
+    animation-name: exemplo2;
+    animation-duration: 4s;
+    animation-iteration-count: 5;
+    animation-direction: alternate-reverse;
+}
+
+.linear{
+    background-color: blue;
+    animation-name: exemplo3;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards; /*finaliza com o final da animação*/
+}
+.ease{
+    background-color: blue;
+    animation-name: exemplo3;
+    animation-duration: 3s;
+    animation-iteration-count: 3;
+    animation-timing-function: ease;
+}
+
+@keyframes exemplo1 {
+    from{
+        background-color: blueviolet;
+    }
+    to{
+        background-color: rosybrown;
+    }
+    
+}
+
+@keyframes exemplo2 {
+    0%{
+        background-color: blueviolet;
+        left: 0;
+        top: 0;
+    }
+    25%{
+        background-color: rosybrown;
+        left: 200px;
+        top: 0px;
+    }
+    50%{
+        background-color: blue;
+        left: 200px;
+        top: 200px;
+    }
+    75%{
+        background-color: yellow;
+        left: 0;
+        top: 200px;
+    }
+    100%{
+        background-color: yellow;
+        left: 0;
+        top: 0;
+    }
+    
+}
+
+@keyframes exemplo3 {
+    from{
+        left: 0px;
+    }
+    to{
+        left: calc(100% - 100px)
+    }
+    
+}
